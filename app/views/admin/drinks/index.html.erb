@@ -6,15 +6,35 @@
       <%= link_to 'Create Drink', new_admin_drink_path, class: 'btn btn-primary' %>
     </p>
   </div>
-	<table class="table">
+	<table class="table table-striped">
 	  <tr>
+	    <th>Image</th>
 	    <th>Name</th>
 	    <th>Description</th>
+	    <th>Actions</th>
 	  </tr>
 	  <% @drinks.each do |drink| %>
 		<tr>
-		  <td><%= drink.name %></td>	
+		  <td class="image-preview center">
+		    <% if drink.file.url.present? %>
+		      <%= image_tag drink.file.url, class: "thumbnail" %>
+		    <% else %>
+		      <%= fa_icon "file-image-o" %>
+		    <% end %>
+		  </td>	
+		  <td class="nowrap"><%= drink.name %></td>	
 		  <td><%= drink.description %></td>	
+		  <td class="nowrap">
+		  	<%= link_to edit_admin_drink_path(drink) do %>
+		  	  <%= fa_icon "pencil", class: "btn btn-primary" %>
+		  	<% end %>
+		  	<%= link_to admin_drink_path(drink) do %>
+		  	  <%= fa_icon "eye", class: "btn btn-success" %>
+		  	<% end %>
+		  	<%= link_to admin_drink_path(drink), method: :delete, data: {confirm: "Are you sure? This action is irreversible!"} do %>
+		  	  <%= fa_icon "trash", class: "btn btn-danger" %>
+		  	<% end %>
+		  </td>	
 		</tr>
 	  <% end %>
 	</table>

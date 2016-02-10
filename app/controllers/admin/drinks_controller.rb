@@ -3,6 +3,10 @@ class Admin::DrinksController < ApplicationController
   	@drinks = Drink.order("name asc")
   end
 
+  def show
+    @drink = Drink.find(params[:id])
+  end
+
   def new
   	@drink = Drink.new
   end
@@ -15,4 +19,23 @@ class Admin::DrinksController < ApplicationController
   	  render :new	# drink didn't save correctly, so re-render the form
   	end
   end	
+
+  def edit
+    @drink = Drink.find(params[:id])
+  end
+
+  def update
+    @drink = Drink.find(params[:id])
+    if @drink.update_attributes(params[:drink])
+      redirect_to admin_drink_path(@drink)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @drink = Drink.find(params[:id])
+    @drink.destroy
+    redirect_to admin_drinks_path
+  end
 end

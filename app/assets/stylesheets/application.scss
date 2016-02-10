@@ -1,2 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+.nowrap {
+  white-space: nowrap;
+}
+.center {
+  text-align: center;	
+}
+td.image-preview img {
+  max-height: 50px;	
+}
