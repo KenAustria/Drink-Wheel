@@ -1,27 +1,19 @@
-<div class="panel panel-default">
-  <div class="panel-heading">List of Drinks</div>
-  <div class="panel-body">
-    <p>This is my list of drinks that I'm providing for my users</p>
-    
-  </div>
-	<table class="table table-striped">
-	  <tr>
-	    <th>Name</th>
-	    <th>Description</th>
-	  </tr>
-	  <% @drinks.each do |drink| %>
-		<tr>
-		  <td class="nowrap">
-			<%= link_to drink_path(drink) do %>
-		  	<%= drink.name %></td>	
-		  <td><%= drink.description %></td>	
-			<td class="nowrap">
-			<% end %>
-		  </td>	
-		</tr>
-	  <% end %>
-	</table>
+<div class="drinks-index">
+	<% @drinks.each do |drink| %>
+    <div class="col-sm-4">
+    	<div class="thumbnail">
+	    	<div class="row">
+			    <div class="col-sm-5">
+			      <%= image_tag drink.file.url %>
+				  </div>
+			    <div class="col-sm-7">
+			      <div class="caption">
+			        <h4><%= drink.name %></h4>
+			        <p><%= drink.description %></p>
+			      </div>
+		      </div>
+	      </div>
+      </div>
+    </div>
+	<% end %>
 </div>
-
-
-
