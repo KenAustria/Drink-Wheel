@@ -19,22 +19,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">DRINK WHEEL</a>
+      <%= link_to "DRINK WHEEL", root_url, class: "navbar-brand" %>
     </div>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="#">LOGIN</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">IBA OFFICIAL COCKTAILS<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">The Unforgettables</a></li>
-            <li><a href="#">Contemporary Classics</a></li>
-            <li><a href="#">New Era Drinks</a></li>
-            
-          </ul>
+        <li>
+          <%= link_to 'DRINKS', drinks_path %>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->

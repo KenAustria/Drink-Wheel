@@ -11,6 +11,23 @@
 td.image-preview img {
   max-height: 50px;	
 }
+.hero {
+	background: url('drink-wheel-home.jpeg') top left;
+	background-size: cover;
+	color: #fff;
+	margin-bottom: 15px;
+	min-height: 500px;
+	.container {
+		padding-top: 160px;
+	}
+}
+.marketing-tiles .panel {
+	padding: 10px 20px;
+}
+.marketing-icon {
+	text-align: center;
+	font-size: 40px;
+}
 .drinks-index {
 	img {
 	  width: 100%;
