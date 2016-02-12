@@ -1,8 +1,9 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4><%= "Viewing: #{@drink.name}" %></h4>
+    <h4><%= @drink.name %></h4>
   </div>
   <div class="panel-body">
+    <%= image_tag @drink.file.url, class: "thumbnail" %>
   	<h4>Description</h4>
   	<p>
   	  <%= @drink.description%>
