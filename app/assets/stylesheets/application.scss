@@ -2,6 +2,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.navbar-default {
+	background-color: #313131;
+}
+
+body {
+	background-color: #D0D0D0;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -11,25 +19,58 @@
 td.image-preview img {
   max-height: 50px;	
 }
+
 .hero {
-	background: image-url('drink-wheel-home.jpeg') top left;
+	background: image-url('skyline-bar.jpeg') top left;
 	background-size: cover;
+	font-family: 'Orbitron';
+	font-size: 250%;
 	color: #fff;
+	margin-top: -20px;
 	margin-bottom: 15px;
-	min-height: 500px;
+	min-height: 575px;
 	.container {
-		padding-top: 160px;
+		text-align: center;
+		padding-top: 210px;
+		h1 {
+		font-size: 225%;
+		}
+		h3 {
+		font-family: 'Poiret One';
+		font-size: 125%;
+		}
 	}
 }
+
 .marketing-tiles .panel {
 	padding: 10px 20px;
+	border: 2px solid black;
+	background: image-url('pattern.jpg') center;
+	background-size: cover;
+	
+	p {
+	text-align: center;
+	font-family: 'Indie Flower';
+	font-size: 20px;
+	color: #ffffff;
+	}
+}	
+
+.container marketing-tiles{
+	p: center;
 }
 .marketing-icon {
 	text-align: center;
 	font-size: 40px;
+	color: #ffffff;
 }
 .drinks-index {
 	img {
 	  width: 100%;
 	}
 }
+.thumbnail {
+	background-color: #ffffff;
+	border: 1px solid gray;
+}
+
