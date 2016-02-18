@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'carrierwave'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'devise'
 gem 'fog'
 gem 'fog-aws'
 gem 'font-awesome-rails'

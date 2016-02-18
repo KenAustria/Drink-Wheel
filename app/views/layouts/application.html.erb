@@ -24,13 +24,23 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <% if user_signed_in? %>
+            <%= link_to "#{current_user.first_name} #{current_user.last_name}", '#' %>|
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path %>|
+            <%= link_to "Sign in", new_user_session_path %>
+          <% end %>
+        </li>
+        <li>
           <%= link_to 'Booze List', drinks_path %>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<%= yield %>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+ <%= yield %>
 </body>
 </html>
