@@ -25,7 +25,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <% if user_signed_in? %>
-            <%= link_to "#{current_user.first_name} #{current_user.last_name}", '#' %>|
+            <%= link_to current_user.email, '#' %>|
             <%= link_to "Log out", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path %>|
