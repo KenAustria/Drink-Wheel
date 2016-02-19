@@ -2,14 +2,6 @@
 @import "bootstrap";
 @import "font-awesome";
 
-.navbar-default {
-	background-color: #313131;
-}
-
-body {
-	background-color: #D0D0D0;
-}
-
 .nowrap {
   white-space: nowrap;
 }
@@ -19,6 +11,21 @@ body {
 td.image-preview img {
   max-height: 50px;	
 }
+
+
+.navbar {
+	background-color: #000000;
+}
+
+.navbar:hover {
+	color: #FFFFFF;
+}
+
+body {
+	background-color: #D0D0D0;
+}
+
+
 
 .hero {
 	background: image-url('skyline-bar.jpeg') top left;
@@ -42,6 +49,8 @@ td.image-preview img {
 	}
 }
 
+
+
 .marketing-tiles .panel {
 	padding: 10px 20px;
 	border: 2px solid black;
@@ -55,7 +64,6 @@ td.image-preview img {
 	color: #ffffff;
 	}
 }	
-
 .container marketing-tiles{
 	p: center;
 }
@@ -64,13 +72,17 @@ td.image-preview img {
 	font-size: 40px;
 	color: #ffffff;
 }
+
+
+
 .drinks-index {
 	img {
 	  width: 100%;
 	}
+	margin-top: -20px;
 }
 .thumbnail {
-	background-color: #ffffff;
+	background-color: #54a3ee;
 	border: 1px solid gray;
 }
 
