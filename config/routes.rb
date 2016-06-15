@@ -57,6 +57,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   namespace :admin do
+    root 'drinks#index'
     resources :drinks
+    resources :wheels
   end
-end
+end 

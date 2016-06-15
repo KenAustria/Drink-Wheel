@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4><%= "Viewing: #{@wheel.name}" %></h4>
+  </div>
+  <div class="panel-body">
+  	<h4>Description</h4>
+  	<p>
+  	  <%= @wheel.description%>
+  	</p>
+  	<p>
+  	  <%= link_to 'Back', admin_wheels_path, class: "btn btn-default" %>
+	  </p> 
+  </div>
+</div> 

@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+/*
+ *= require rails_bootstrap_forms
+ */
+
 
 .nowrap {
   white-space: nowrap;
@@ -13,66 +17,35 @@ td.image-preview img {
 }
 
 
-.navbar {
-	background-color: #000000;
-}
 
 .navbar:hover {
-	color: #FFFFFF;
+	color: #92D490;
 }
 
-body {
-	background-color: #D0D0D0;
-}
 
 
 
 .hero {
-	background: image-url('skyline-bar.jpeg') top left;
-	background-size: cover;
-	font-family: 'Orbitron';
-	font-size: 250%;
-	color: #fff;
-	margin-top: -20px;
-	margin-bottom: 15px;
-	min-height: 575px;
-	.container {
-		text-align: center;
-		padding-top: 210px;
-		h1 {
-		font-size: 225%;
-		}
-		h3 {
-		font-family: 'Poiret One';
-		font-size: 125%;
-		}
-	}
+    background: image-url('skyline-bar.jpeg') top left;
+    background-size: cover;
+    font-family: 'Orbitron';
+    font-size: 250%;
+    color: #fff;
+    margin-top: -75px;
+
+    min-height: 575px;
+    .container {
+        text-align: center;
+        padding-top: 210px;
+        h1 {
+        font-size: 225%;
+        }
+        h3 {
+        font-family: 'Poiret One';
+        font-size: 125%;
+        }
+    }
 }
-
-
-
-.marketing-tiles .panel {
-	padding: 10px 20px;
-	border: 2px solid black;
-	background: image-url('pattern.jpg') center;
-	background-size: cover;
-	
-	p {
-	text-align: center;
-	font-family: 'Indie Flower';
-	font-size: 20px;
-	color: #ffffff;
-	}
-}	
-.container marketing-tiles{
-	p: center;
-}
-.marketing-icon {
-	text-align: center;
-	font-size: 40px;
-	color: #ffffff;
-}
-
 
 
 .drinks-index {

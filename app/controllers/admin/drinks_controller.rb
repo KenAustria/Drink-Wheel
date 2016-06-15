@@ -1,13 +1,4 @@
-class Admin::DrinksController < ApplicationController
-  before_filter :wrap_site_in_basic_auth
-
-  def wrap_site_in_basic_auth
-  authenticate_or_request_with_http_basic do |user_name, password|
-    user_name == "KennPangilinan" && password == "Toodaloo"
-  end
-  warden.custom_failure! if performed?
-  end
-
+class Admin::DrinksController < Admin::BaseController
   def index
   	@drinks = Drink.order("name asc")
   end
