@@ -1,7 +1,21 @@
-<% @drinks.each do |drink| %>
-  <h3><%= drink.name %></h3>
-  <p>
-  <%= drink.description %>
-  <%= image_tag drink.file_url %>	
-  </p>
+<div class="drinks_search">
+	<% @drinks.each do |drink| %>
+	<div class="col-sm-4">
+    	<%= link_to drink_path(drink) do %>
+	    	<div class="thumbnail">
+		    	<div class="row">
+				    <div class="col-sm-5">
+				      <%= image_tag drink.file.url %>
+					  </div>
+				    <div class="col-sm-7">
+				      <div class="caption">
+				        <h4><%= drink.name %></h4>
+				        <p><%= drink.description %></p>
+				      </div>
+			      </div>
+		      </div>
+	      </div>
+      <% end %>
+    </div>
 <% end %>
+

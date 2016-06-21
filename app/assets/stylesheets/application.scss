@@ -5,7 +5,7 @@
  *= require rails_bootstrap_forms
  */
 
-
+#HOME
 .nowrap {
   white-space: nowrap;
 }
@@ -15,11 +15,9 @@
 td.image-preview img {
   max-height: 50px;	
 }
-
 .navbar:hover {
 	color: #92D490;
 }
-
 .hero {
     background: image-url('skyline-bar.jpeg') top left;
     background-size: cover;
@@ -41,6 +39,9 @@ td.image-preview img {
     }
 }
 
+
+
+#BOOZE LIST
 .drinks-index {
 	img {
 	  width: 100%;
@@ -51,7 +52,6 @@ td.image-preview img {
 	background-color: #54a3ee;
 	border: 1px solid gray;
 }
-
 .search-box {
     position: absolute;
     margin-top: -65px;
