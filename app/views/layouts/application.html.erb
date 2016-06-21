@@ -21,6 +21,17 @@
       </button>
       <%= link_to "DRINK WHEEL", root_url, class: "navbar-brand" %>
     </div>
+    
+    <div class = "search-box">
+      <%= form_for :search, url: search_drinks_path, method: :get do |f| %>
+      <%= f.text_field :name, placeholder: "Search For A Drink" %>
+      <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+
+
+
 
       <ul class="nav navbar-nav navbar-right">
         <li>
