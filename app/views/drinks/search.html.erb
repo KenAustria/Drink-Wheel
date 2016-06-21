@@ -1,0 +1,7 @@
+<% @drinks.each do |drink| %>
+  <h3><%= drink.name %></h3>
+  <p>
+  <%= drink.description %>
+  <%= image_tag drink.file_url %>	
+  </p>
+<% end %>

@@ -1,0 +1,7 @@
+<div class = "search-box">
+<%= form_for :search, url: search_drinks_path, method: :get do |f| %>
+<%= f.text_field :name, placeholder: "The Thirst Is Real" %>
+<%= f.submit class: "btn btn-primary" %>
+<% end %>
+</div>
+

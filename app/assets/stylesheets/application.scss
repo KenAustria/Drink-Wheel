@@ -16,14 +16,9 @@ td.image-preview img {
   max-height: 50px;	
 }
 
-
-
 .navbar:hover {
 	color: #92D490;
 }
-
-
-
 
 .hero {
     background: image-url('skyline-bar.jpeg') top left;
@@ -32,7 +27,6 @@ td.image-preview img {
     font-size: 250%;
     color: #fff;
     margin-top: -75px;
-
     min-height: 575px;
     .container {
         text-align: center;
@@ -47,7 +41,6 @@ td.image-preview img {
     }
 }
 
-
 .drinks-index {
 	img {
 	  width: 100%;
@@ -59,3 +52,8 @@ td.image-preview img {
 	border: 1px solid gray;
 }
 
+.search-box {
+    position: absolute;
+    margin-top: -65px;
+    margin-left: 970px;
+}
