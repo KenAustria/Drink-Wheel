@@ -7,7 +7,6 @@
     <%= csrf_meta_tags %>
   </head>
 
-
   <body>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -31,71 +30,22 @@
         <% end %>
       </div>
    
-    <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-      </button>
+    
 
-      <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Sign up for Drink Wheel!</h4>
-            <%= link_to user_omniauth_authorize_path(:facebook), class: "btn btn-primary btn-block" do %>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            Facebook Log In 
-          <%end%>
-             
-          </div>
-
-          <div class="modal-body">
-            <form role="form">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password">
-              </div>
-            </form>
-          </div>
-          
-          <div class="modal-footer">
-             <%= link_to "Close", "#", class: "btn btn-default", "data-dismiss" =>"modal" %>
-            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
-            <h5>Already have an account?</h5><%= link_to "Log In", new_user_session_path %>
-          </div>
-        </div>
-      </div>
+<ul class="nav navbar-nav navbar-right">
+<!-- Sign Up Modal -->
+    <div class="modal fade" id="SignUpSignInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <%= render '/layouts/sign_up' %>
+      <%= render '/layouts/sign_in' %>
     </div>
-      
 
-
-
-
-
-
-
-
-
-
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to current_user.email, '#' %>|
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-            <li><%= link_to "Log In", new_user_session_path %></li>
-          <% end %>
-        </li>
-        <li><%= link_to "Facebook Sign In", user_omniauth_authorize_path(:facebook) %>
-        </li>
-        <li>
-          <%= link_to 'Booze List', drinks_path %>
-        </li>
-      </ul>
+  <li>
+    <%= link_to 'Log In/Sign Up', "#", "data-toggle" =>"modal", "data-target" =>"#SignUpSignInModal" %>
+  </li>
+  <li>
+    <%= link_to 'IBA Official Cocktails', drinks_path %>
+  </li>
+</ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </nav>

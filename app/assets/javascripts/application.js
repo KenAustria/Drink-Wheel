@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+togglePanes = function(elem1, elem2){
+	console.log("toggle");
+  $(elem1).toggle();
+  $(elem2).toggle();
+}
+
+

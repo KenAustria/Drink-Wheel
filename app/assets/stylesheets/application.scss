@@ -5,10 +5,11 @@
  *= require rails_bootstrap_forms
  */
 
-#HOME
+/*HOME*/
 .nowrap {
   white-space: nowrap;
 }
+
 .center {
   text-align: center;	
 }
@@ -45,10 +46,12 @@ td.image-preview img {
     }
 }
 
+/*MODAL*/
+#SignUp {
+    display:none;
+}
 
-
-
-#BOOZE LIST
+/*IBA OFFICIAL COCKTAILS*/
 .drinks-index {
 	img {
 	  width: 100%;
@@ -59,3 +62,4 @@ td.image-preview img {
 	background-color: #54a3ee;
 	border: 1px solid gray;
 }
+
