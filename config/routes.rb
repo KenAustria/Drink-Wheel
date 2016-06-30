@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   	end
   end
 
+  resources :wheels, only: [:index]
+
   namespace :admin do
     root 'drinks#index'
     resources :drinks
