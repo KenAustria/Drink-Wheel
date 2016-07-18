@@ -56,17 +56,22 @@ $(document).ready(function() {
       var wheel_id = $("#wheel-id").val();
       var user_id = $("#user-id").val();
 
-      alert("You chose " + $drink.html() + " that has drink ID " + $drink.data()["id"] + " and wheel ID " + wheel_id);
+      
+      
       $.post( "wheels/" + wheel_id + "/spin", 
         { 
           user_id: user_id, 
           drink_id: drink_id 
         }
       )
-        .done(function() {                          // success callback
-          $drink.css({'font-weight': 'bold', 'color': 'yellow'})
+      .done(function() {         // success callback              
+        $('#txt').avgrund({
+          width: 230,
+          height: 120,          
+          template: "Cheers! You're having " + $drink.html() 
+        });  
+        $('#txt').trigger('click')
       });
-
     }, 6000)
     /*let's make the spin btn to tilt every
     time the edge of the section hits
@@ -116,9 +121,6 @@ togglePanes = function(elem1, elem2){
   $(elem1).toggle();
   $(elem2).toggle();
 }
-
-
-
 
 // wheel is spinning.....and when it stops you have a result that is written to #txt
 // #txt 12344.43754745
