@@ -1,5 +1,6 @@
 <h1>User:<%= @user.first_name %> <%= @user.last_name %></h1>
 <h1>Wheels</h1>
+
 <% @user.wheels.each do |wheel| %>
   <h4><%= wheel.title %></h4>
   <% wheel.drinks.each do |drink| %>

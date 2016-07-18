@@ -1,0 +1,2 @@
+class Spin < Event
+end

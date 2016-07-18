@@ -1,0 +1,39 @@
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;	
+}
+td.image-preview img {
+  max-height: 50px;	
+}
+.navbar:hover {
+	color: #92D490;
+}
+.search-box {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+.hero {
+  background: image-url('skyline-bar.jpeg') top left;
+  background-size: cover;
+  font-family: 'Orbitron';
+  font-size: 250%;
+  color: #fff;
+  margin-top: -75px;
+  min-height: 575px;
+  .container {
+    text-align: center;
+    padding-top: 210px;
+    h1 {
+      font-size: 225%;
+    }
+    h3 {
+      font-family: 'Poiret One';
+      font-size: 125%;
+    }
+  }
+}

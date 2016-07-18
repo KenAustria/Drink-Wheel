@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+s<div class="panel panel-default">
   <div class="panel-heading">List of Drinks</div>
   <div class="panel-body">
     <p>This is my list of drinks that I'm providing for my users</p>
@@ -13,29 +13,30 @@
 	    <th>Description</th>
 	    <th>Actions</th>
 	  </tr>
-	  <% @drinks.each do |drink| %>
-		<tr>
-		  <td class="image-preview center">
-		    <% if drink.file.url.present? %>
-		      <%= image_tag drink.file.url, class: "thumbnail" %>
-		    <% else %>
-		      <%= fa_icon "file-image-o" %>
+	<% @drinks.each do |drink| %>
+	  <tr>
+		<td class="image-preview center">
+		 <% if drink.file.url.present? %>
+		    <%= image_tag drink.file.url, class: "thumbnail" %>
+		 <% else %>
+		    <%= fa_icon "file-image-o" %>
 		    <% end %>
-		  </td>	
-		  <td class="nowrap"><%= drink.name %></td>	
-		  <td><%= drink.description %></td>	
-		  <td class="nowrap">
-		  	<%= link_to edit_admin_drink_path(drink) do %>
-		  	  <%= fa_icon "pencil", class: "btn btn-primary" %>
-		  	<% end %>
-		  	<%= link_to admin_drink_path(drink) do %>
-		  	  <%= fa_icon "eye", class: "btn btn-success" %>
-		  	<% end %>
-		  	<%= link_to admin_drink_path(drink), method: :delete, data: {confirm: "Are you sure? This action is irreversible!"} do %>
-		  	  <%= fa_icon "trash", class: "btn btn-danger" %>
-		  	<% end %>
-		  </td>	
-		</tr>
+		</td>	
+		<td class="nowrap"><%= drink.name %></td>	
+		<td><%= drink.description %></td>	
+		<td class="nowrap">
+		<%= link_to edit_admin_drink_path(drink) do %>
+		  	<%= fa_icon "pencil", class: "btn btn-primary" %>
+		<% end %>
+		<%= link_to admin_drink_path(drink) do %>
+		  	<%= fa_icon "eye", class: "btn btn-success" %>
+		 <% end %>
+		 <%= link_to admin_drink_path(drink), method: :delete, data: {
+		 confirm: "Are you sure? This action is irreversible!"} do %>
+		  	<%= fa_icon "trash", class: "btn btn-danger" %>
+		<% end %>
+		</td>	
+	  </tr>
 	  <% end %>
 	</table>
 </div>

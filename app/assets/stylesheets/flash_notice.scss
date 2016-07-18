@@ -1,0 +1,15 @@
+// FLASH NOTICE
+#flash {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2em;
+  z-index: 1;
+  .notice { 
+    background-color: #5cb85c; 
+    line-height: 2.5em;
+  }
+  .alert { background-color: #d9534f; }
+}

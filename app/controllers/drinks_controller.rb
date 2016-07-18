@@ -8,7 +8,11 @@ class DrinksController < ApplicationController
   end
 
   def search
-  @drinks = Drink.basic_search(params[:search][:name]) #redirect_to show
+  	@drinks = Drink.basic_search(params[:search][:name]) #redirect_to show
   end
- 
-end 
+
+  def spin
+  	Event::Spin.create(params)
+  	head :ok
+  end
+end  

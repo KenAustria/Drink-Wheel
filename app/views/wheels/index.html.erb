@@ -1,29 +1,35 @@
-<button type="button" class="btn btn-primary">CREATE</button>
-<button type="button" class="btn btn-warning">MULTIPLE</button>
-<button type="button" class="btn btn-danger">RANDOM</button>
-
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Exo+2:900' rel='stylesheet' type='text/css'>
 
+
 <div id="wrapper">
-            
-        <div id="wheel">
-            <div id="inner-wheel">
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-                <div class="sec"><span class="fa fa-meh-o"></span></div>
-            </div>       
-           
-            <div id="spin">
-                <div id="inner-spin"></div>
-            </div>
-            
-            <div id="shine"></div>
-        </div>
-        
-        
-        <div id="txt"></div>
-  </div>
+  <div id="wheel">
+    <div id="inner-wheel">
+      <div class="sec"><span class="fa fa-star"></span></div>
+      <div class="sec"><span class="fa fa-bolt"></span></div>
+      <div class="sec"><span class="fa fa-heart"></span></div>
+      <div class="sec"><span class="fa fa-fire"></span></div>
+      <div class="sec"><span class="fa fa-tint"></span></div>
+      <div class="sec"><span class="fa fa-trophy"></span></div>
+    </div>                  
+    <div id="spin">
+      <div id="inner-spin"></div>
+    </div>            
+    <div id="shine"></div>
+    </div>
+    <div id="txt">text</div>
+</div>
+
+<input type="hidden" value="<%= @wheel.id%>" id="wheel-id"/>
+<input type="hidden" value="<%= current_user.try(:id)%>" id="user-id"/>
+<table class="drinks-table">
+  <% @wheel.drinks.each_with_index do |drink, index| %>
+    <tr>
+      <td class="icon-container"><i class="fa fa-star"/></td>
+      <td class="name-container" id="drink<%= index %>" data-id="<%= drink.id%>"><%= drink.name%></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
