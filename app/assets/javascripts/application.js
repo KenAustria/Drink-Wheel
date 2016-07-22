@@ -67,8 +67,11 @@ $(document).ready(function() {
       .done(function() {         // success callback              
         $('#txt').avgrund({
           width: 230,
-          height: 120,          
-          template: "Cheers! You're having a " + $drink.html() 
+          height: 120,
+          closeByEscape: true,
+          closeByDocument: true,          
+          template: "Cheers! You're having a " + $drink.html()
+          
         });  
         $('#txt').trigger('click')
       });
