@@ -22,14 +22,6 @@
 
 <input type="hidden" value="<%= @wheel.id%>" id="wheel-id"/>
 <input type="hidden" value="<%= current_user.try(:id)%>" id="user-id"/>
-<table class="drinks-table">
-  <% @wheel.drinks.each_with_index do |drink, index| %>
-    <tr>
-      <td class="icon-container"><i class="fa fa-star"/></td>
-      <td class="name-container" id="drink<%= index %>" data-id="<%= drink.id%>"><%= drink.name%></td>
-    </tr>
-  <% end %>
-</table>
-
-
-
+<% @wheel.drinks.each_with_index do |drink, index| %>
+  <input type="hidden" id="drink<%= index %>" data-id="<%= drink.id%>" value="<%= drink.name %>" />
+<% end %>

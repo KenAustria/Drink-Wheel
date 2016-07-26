@@ -64,13 +64,14 @@ $(document).ready(function() {
           drink_id: drink_id 
         }
       )
-      .done(function() {         // success callback              
+      .done(function() {         // success callback 
+      console.log($drink)             
         $('#txt').avgrund({
           width: 230,
           height: 120,
           closeByEscape: true,
           closeByDocument: true,          
-          template: "Cheers! You're having a " + $drink.html()
+          template: "Cheers! You're having a " + $drink.val()
           
         });  
         $('#txt').trigger('click')
@@ -94,7 +95,7 @@ $(document).ready(function() {
 
         var aoY = t.offset().top;
         $("#txt").html(aoY);
-        console.log(aoY);
+        // console.log(aoY);
 
         /*23.7 is the minumum offset number that
         each section can get, in a 30 angle degree.
