@@ -67,11 +67,11 @@ $(document).ready(function() {
       .done(function() {         // success callback 
       console.log($drink)             
         $('#txt').avgrund({
-          width: 230,
-          height: 120,
+          width: 350,
+          height: "auto",
           closeByEscape: true,
           closeByDocument: true,          
-          template: "Cheers! You're having a " + $drink.val()
+          template: "<div class='thumbnail'> <div class='row'> <div class='col-sm-5'><img src=" + $drink.data('url') +  "/></div> <div class='col-sm-5'> <div class='caption'> <h3>" + $drink.val() + "</h3> <h6>" + $drink.data('description') + "</h6> </div> </div> </div> </div>" 
           
         });  
         $('#txt').trigger('click')

@@ -23,5 +23,5 @@
 <input type="hidden" value="<%= @wheel.id%>" id="wheel-id"/>
 <input type="hidden" value="<%= current_user.try(:id)%>" id="user-id"/>
 <% @wheel.drinks.each_with_index do |drink, index| %>
-  <input type="hidden" id="drink<%= index %>" data-id="<%= drink.id%>" value="<%= drink.name %>" />
+  <input type="hidden" id="drink<%= index %>" data-id="<%= drink.id%>" data-url="<%= drink.file.url%>" data-description="<%= drink.description%>" value="<%= drink.name %>" />
 <% end %>
