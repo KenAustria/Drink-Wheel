@@ -71,7 +71,7 @@ $(document).ready(function() {
           height: "auto",
           closeByEscape: true,
           closeByDocument: true,          
-          template: "<div class='thumbnail'> <div class='row'> <div class='col-sm-5'><img src=" + $drink.data('url') +  "/></div> <div class='col-sm-5'> <div class='caption'> <h3>" + $drink.val() + "</h3> <h6>" + $drink.data('description') + "</h6> </div> </div> </div> </div>" 
+          template: "<div class='thumbnail'> <div class='row'> <div class='col-sm-5'><img src='" + $drink.data('url') +  "'/></div> <div class='col-sm-5'> <div class='caption'> <h3>" + $drink.val() + "</h3> <h6>" + $drink.data('description') + "</h6> </div> </div> </div> </div>" 
           
         });  
         $('#txt').trigger('click')
