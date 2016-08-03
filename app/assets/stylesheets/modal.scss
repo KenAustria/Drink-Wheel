@@ -1,6 +1,16 @@
 #SignUp {
   display:none;
 }
+
+.modal-dialog {
+	position: relative;
+    display: table;   
+    width: auto;
+    min-width: 300px;   
+}
 .modal-content {
-  color: #000;
+	position: relative;
+    display: table; 
+    width: auto;
+    min-width: 300px;
 }
