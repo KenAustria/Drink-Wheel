@@ -33,6 +33,7 @@ html, body {
 	width: 100%;
 	position: relative;
 	top: -1500px;
+	bottom: -500px;
 	left: 0;
 	z-index: 101;
 	visibility: hidden;
@@ -112,7 +113,7 @@ body.avgrund-active {
 .avgrund-close {
 	display: block;
 	color: #555;
-	font-size: 13px;
+	font-size: 15px;
 	text-decoration: none;
 	text-transform: uppercase;
 	position: absolute;
@@ -120,9 +121,6 @@ body.avgrund-active {
 	right: 10px;
 }
 
-.avgrund-popin .thumbnail {
-	margin-bottom: 0px;
-}
 
 #txt {
 	visibility: hidden;

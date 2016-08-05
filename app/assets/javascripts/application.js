@@ -67,8 +67,10 @@ $(document).ready(function() {
       .done(function() {         // success callback 
       console.log($drink)             
         $('#txt').avgrund({
-          width: 350,
+          width: 200,
           height: "auto",
+          showClose: true,
+          showCloseText: 'Close',
           closeByEscape: true,
           closeByDocument: true,
           closeByEvent: true,          
