@@ -21,20 +21,22 @@
         </button>
         <%= link_to root_url, class: "navbar-brand" do %>
           <%= image_tag "brand.png" %>
-        <% end %>
+            <% end %>
+              <% if !user_signed_in? %>
+                <div class="modal fade" id="SignUpSignInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <%= render '/layouts/sign_up' %>
+                    <%= render '/layouts/sign_in' %>
+                </div>
+                <% end %>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
             <% if user_signed_in? %>
               <%= link_to 'Welcome, Foo', "#"%>
-            <% else %>
-              <div class="modal fade" id="SignUpSignInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <%= render '/layouts/sign_up' %>
-                <%= render '/layouts/sign_in' %>
-              </div>
-              <%= link_to 'Log In', "#", "data-toggle" =>"modal", "data-target" =>"#SignUpSignInModal" %>
-            <% end %>
+                <% else %>
+                  <%= link_to 'Log In', "#", "data-toggle" =>"modal", "data-target" =>"#SignUpSignInModal" %>
+                    <% end %>
           </li>
           <li>
             <%= link_to 'Wheels', wheels_path %>
@@ -51,7 +53,7 @@
                 <button type=“submit” class=“bin ban-primary”>
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
-            <% end %>
+                <% end %>
           </div>
       </div>
   </nav>
@@ -60,12 +62,12 @@
       <p class="notice">
         <%= notice %>
       </p>
-    <% end %>
-    <% if alert %>
-      <p class="alert">
-        <%= alert %>
-      </p>
-    <% end %>
+      <% end %>
+        <% if alert %>
+          <p class="alert">
+            <%= alert %>
+          </p>
+          <% end %>
   </div>
   <%= yield %>
 </body>
