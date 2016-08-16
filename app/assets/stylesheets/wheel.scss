@@ -9,6 +9,7 @@
   box-shadow:rgba(0,0,0,0.2) 0px 0px 10px, rgba(0,0,0,0.05) 0px 3px 0px;
   transform: rotate(0deg);
 }
+
 #wheel:before{
   content:'';
   position:absolute;
@@ -16,18 +17,20 @@
   width:242px;
   height:242px;
   border-radius:50%;
-  z-index:1000;   
+  z-index:1000; 
 }
+
 #inner-wheel{
   width:100%;
   height:100%;
-    
+  
   -webkit-transition: all 6s cubic-bezier(0,.99,.44,.99);
   -moz-transition:    all 6 cubic-bezier(0,.99,.44,.99);
   -o-transition:      all 6s cubic-bezier(0,.99,.44,.99);
   -ms-transition:     all 6s cubic-bezier(0,.99,.44,.99);
   transition:         all 6s cubic-bezier(0,.99,.44,.99); 
 }
+
 #wheel div.sec{
   position: absolute;
   width: 0;
@@ -37,16 +40,17 @@
   border-color: #19c transparent;
   transform-origin: 75px 129px;
   left:50px;
-  top:-4px;   
+  top:-4px; 
   opacity:1;
 }
+
 #wheel div.sec:nth-child(1){
   transform: rotate(60deg);
   -webkit-transform: rotate(60deg);
   -moz-transform: rotate(60deg);
   -o-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
-  border-color: #ECFEAA transparent;  
+  border-color: #16a085 transparent;  
 }
 #wheel div.sec:nth-child(2){
   transform: rotate(120deg);
@@ -54,7 +58,7 @@
   -moz-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
-  border-color: #E2DE84 transparent;  
+  border-color: #2980b9 transparent;  
 }
 #wheel div.sec:nth-child(3){
   transform: rotate(180deg);
@@ -62,7 +66,7 @@
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  border-color: #A6A670 transparent;  
+  border-color: #34495e transparent;  
 }
 #wheel div.sec:nth-child(4){
   transform: rotate(240deg);
@@ -70,7 +74,7 @@
   -moz-transform: rotate(240deg);
   -o-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
-  border-color: #86836D transparent;  
+  border-color: #f39c12 transparent;  
 }
 #wheel div.sec:nth-child(5){
   transform: rotate(300deg);
@@ -78,7 +82,7 @@
   -moz-transform: rotate(300deg);
   -o-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
-  border-color: #626267 transparent;  
+  border-color: #d35400 transparent;  
 }
 #wheel div.sec:nth-child(6){
   transform: rotate(360deg);
@@ -86,8 +90,10 @@
   -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
-  border-color: #FFFCF9 transparent;  
+  border-color: #c0392b transparent;  
 }
+
+
 #wheel div.sec .fa{
   margin-top: -100px;
   color: rgba(0,0,0,0.2);
@@ -97,8 +103,13 @@
   text-align: center;
   font-size:36px;
   margin-left:-15px;
+  
   text-shadow: rgba(255, 255, 255, 0.1) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 0px;
 }
+
+
+
+
 #spin{
   width:68px;
   height:68px;
@@ -109,15 +120,18 @@
   border-radius:50%;
   box-shadow:rgba(0,0,0,0.1) 0px 3px 0px;
   z-index:1000;
-  background:#000;
+  background:#fff;
   cursor:pointer;
-  font-family: 'Exo 2', sans-serif;  
+  font-family: 'Exo 2', sans-serif;
+  
   -webkit-user-select: none; 
   -moz-user-select: none;    
   -ms-user-select: none;     
   -o-user-select: none;
   user-select: none;   
 }
+
+
 #spin:after{
   content:"SPIN"; 
   text-align:center;
@@ -130,6 +144,7 @@
   height:68px;
   display:block;
 }
+
 #spin:before{
   content:"";
   position:absolute;
@@ -137,10 +152,11 @@
   height: 0;
   border-style: solid;
   border-width: 0 20px 28px 20px;
-  border-color: transparent transparent #000 transparent;
+  border-color: transparent transparent #ffffff transparent;
   top:-12px;
   left:14px;
 }
+
 #inner-spin{
   width:54px;
   height:54px;
@@ -151,7 +167,8 @@
   border-radius:50%;
   background:red;
   z-index:999;
-  box-shadow:rgba(255,255,255,1) 0px -2px 0px inset, rgba(255,255,255,1) 0px 2px 0px inset,  rgba(0,0,0,0.4) 0px 0px 5px ;    
+  box-shadow:rgba(255,255,255,1) 0px -2px 0px inset, rgba(255,255,255,1) 0px 2px 0px inset,  rgba(0,0,0,0.4) 0px 0px 5px ;
+  
   background: rgb(255,255,255); /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
@@ -159,14 +176,19 @@
   background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Opera 12+ */
   background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */    
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */  
 }
+
 #spin:active #inner-spin{
   box-shadow:rgba(0,0,0,0.4) 0px 0px 5px inset;
 }
+
 #spin:active:after{
   font-size:15px; 
 }
+
+
+
 #shine{
   width:250px;
   height:250px;
@@ -174,16 +196,19 @@
   top:0;
   left:0;
   background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.99) 1%, rgba(255,255,255,0.91) 9%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(1%,rgba(255,255,255,0.99)), color-stop(9%,rgba(255,255,255,0.91)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  opacity:0.1;
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(1%,rgba(255,255,255,0.99)), color-stop(9%,rgba(255,255,255,0.91)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+opacity:0.1;
+  
 }
 #txt {
-  color: #000;
+    color: #000;
 }
 .avgrund-popin {
   top: 100px;

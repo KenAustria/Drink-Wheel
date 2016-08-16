@@ -1,0 +1,26 @@
+#services {
+  background-color: #ffffff;
+  .service-box {
+    padding-top: 20px;
+    .fa-4x {
+      font-size: 128px;
+    }
+    .text-muted {
+      padding-bottom: 15%;
+      font-size: 18px;
+    }
+  }
+  .container {
+    padding-top: 2px;
+    .row {     
+      h2 {
+        font-family: 'Poiret One';
+        font-size: 55px;
+      }
+    }
+  }
+  h3 {
+    font-family: 'Poiret One';
+    font-size: 40px;     
+  }
+}

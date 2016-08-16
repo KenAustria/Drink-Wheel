@@ -1,11 +1,14 @@
 /*IBA OFFICIAL COCKTAILS*/
 .drinks-index {
+  img {
+    width: 100% ;
+  }
+    margin-top: -20 px;
+  }
+  .thumbnail {
+    background-color: #54a3ee;
+	  border: 1px solid gray;
 	img {
-	  width: 100%;
+	  max-width: 100%;
 	}
-	margin-top: -20px;
-}
-.thumbnail {
-	background-color: #54a3ee;
-	border: 1px solid gray;
 }

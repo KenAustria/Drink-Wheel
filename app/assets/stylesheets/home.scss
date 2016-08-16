@@ -3,25 +3,25 @@
 }
 
 .center {
-  text-align: center;	
+  text-align: center;
 }
 td.image-preview img {
-  max-height: 50px;	
-}
-.hero {
-  background: image-url('skyline-bar.jpeg') top left;
-  background-size: cover;
-  font-family: 'Orbitron';
-  font-size: 250%;
-  color: #fff;
-  margin-top: -75px;
-  min-height: 575px;
-  .container {
-    text-align: center;
-    padding-top: 210px;
-    h3 {
-      font-family: 'Poiret One';
-      font-size: 200%;
+    max-height: 50 px;
+  }
+  .hero {
+    background: image-url('skyline-bar.jpeg') top left;
+    background-size: cover;
+    font-family: 'Orbitron';
+    font-size: 250% ;
+    color: #fff;
+    margin-top: -75px;
+    min-height: 575px;
+    .container {
+      text-align: center;
+      padding-top: 210px;
+      h3 {
+        font-family: 'Poiret One';
+        font-size: 200%;
+      }
     }
   }
-}
