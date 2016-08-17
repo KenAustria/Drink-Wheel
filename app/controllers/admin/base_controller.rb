@@ -7,3 +7,4 @@ class Admin::BaseController < ApplicationController
 		user_name == "a" && password == "a"
 	end
 end
+end
