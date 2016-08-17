@@ -63,7 +63,7 @@ $(document).ready(function() {
           closeByDocument: true,
           template: $('#result'),
           onLoad: function(){
-\           $('body').prepend($('#result').clone());
+           $('body').prepend($('#result').clone());
           }
         });
 
