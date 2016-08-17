@@ -16,8 +16,7 @@
       <div id="inner-spin"></div>
     </div>            
     <div id="shine"></div>
-    </div>
-    <div id="txt">text</div>
+  </div>
 </div>
 
 <input type="hidden" value="<%= @wheel.id%>" id="wheel-id"/>
@@ -25,3 +24,17 @@
 <% @wheel.drinks.each_with_index do |drink, index| %>
   <input type="hidden" id="drink<%= index %>" data-id="<%= drink.id%>" data-url="<%= drink.file.url%>" data-description="<%= drink.description%>" value="<%= drink.name %>" />
 <% end %>
+
+<div id="result" class='thumbnail'>
+  <div class='row'>
+    <div class='col-sm-5'>
+      <img id="result-image"/>
+    </div>
+    <div class='col-sm-5'>
+      <div class='caption'>
+        <h3 id="result-name" />
+        <h6 id="result-description" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -54,6 +54,18 @@ $(document).ready(function() {
         var wheel_id = $("#wheel-id").val();
         var user_id = $("#user-id").val();
 
+        $('#result').avgrund({
+          width: 200,
+          height: "auto",
+          showClose: true,
+          showCloseText: 'Close',
+          closeByEscape: true,
+          closeByDocument: true,
+          template: $('#result'),
+          onLoad: function(){
+\           $('body').prepend($('#result').clone());
+          }
+        });
 
 
         $.post("wheels/" + wheel_id + "/spin", {
@@ -61,18 +73,10 @@ $(document).ready(function() {
             drink_id: drink_id
           })
           .done(function() { // success callback 
-            console.log($drink)
-            $('#txt').avgrund({
-              width: 200,
-              height: "auto",
-              showClose: true,
-              showCloseText: 'Close',
-              closeByEscape: true,
-              closeByDocument: true,
-              closeByEvent: true,
-              template: "<div class='thumbnail'> <div class='row'> <div class='col-sm-5'><img src='" + $drink.data('url') + "'/></div> <div class='col-sm-5'> <div class='caption'> <h3>" + $drink.val() + "</h3> <h6>" + $drink.data('description') + "</h6> </div> </div> </div> </div>"
-            });
-            $('#txt').trigger('click')
+            $('#result-image').attr('src', $drink.data('url'));
+            $('#result-name').html($drink.val());
+            $('#result-description').html($drink.data('description'));
+            $('#result').trigger('click');
           });
       }, 6000)
       /*let's make the spin btn to tilt every
