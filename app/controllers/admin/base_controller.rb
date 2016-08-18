@@ -4,6 +4,7 @@ class Admin::BaseController < ApplicationController
 
 	def wrap_site_in_basic_auth
 		authenticate_or_request_with_http_basic do |user_name, password | #user_name == "KennPangilinan" && password == "Toodaloo"
-		user_name == "a" && password == "a"
+			user_name == "a" && password == "a"
+		end
 	end
 end
