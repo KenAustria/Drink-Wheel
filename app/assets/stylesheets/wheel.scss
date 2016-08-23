@@ -3,11 +3,13 @@
   width:250px;
   height:250px;
   border-radius:50%;  
-  position:relative;
+  position:relative !important;
   overflow:hidden;
   // border:8px solid #fff;
   box-shadow:rgba(0,0,0,0.2) 0px 0px 10px, rgba(0,0,0,0.05) 0px 3px 0px;
   transform: rotate(0deg);
+  -webkit-clip-path: circle(50.0% at 50% 50%);
+  clip-path: circle(50.0% at 50% 50%);
 }
 
 #wheel:before{
@@ -93,7 +95,6 @@
   border-color: #FFFCF9 transparent;  
 }
 
-
 #wheel div.sec .fa{
   margin-top: -100px;
   color: rgba(0,0,0,0.2);
@@ -106,9 +107,6 @@
   
   text-shadow: rgba(255, 255, 255, 0.1) 0px -1px 0px, rgba(0, 0, 0, 0.2) 0px 1px 0px;
 }
-
-
-
 
 #spin{
   width:68px;
@@ -130,7 +128,6 @@
   -o-user-select: none;
   user-select: none;   
 }
-
 
 #spin:after{
   content:"SPIN"; 
@@ -187,8 +184,6 @@
   font-size:15px; 
 }
 
-
-
 #shine{
   width:250px;
   height:250px;
@@ -202,8 +197,6 @@
   background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0.91) 9%,rgba(255,255,255,0) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
   opacity:0.1;
   
 }

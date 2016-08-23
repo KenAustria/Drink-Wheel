@@ -118,6 +118,8 @@ $(document).ready(function() {
       noY = t.offset().top;
     }); // end btn tilting
   });
+
+
 }); //DOCUMENT READY
 
 
