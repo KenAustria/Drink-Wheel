@@ -1,0 +1,15 @@
+<div class="field">
+  <%= f.label :wheel_name %><br />
+  <%= f.wheel_name_field :wheel_name, autofocus: true %>
+</div>
+
+<%= form_for @wheel do |f| %> 
+	<%= f.form_for :drinks do |df| %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	  <%= df.select :drink_id, options_for_select(Drink.all.order(:name)) %>
+	<%= f.submit class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+  <div class="panel-heading">List of Wheels</div>
+    <div class="panel-body">
+      <p>Your created wheels!</p>
+   <p>
+    <%= link_to 'Create Wheel', new_wheel_path, class: 'btn btn-primary' %>
+   </p>
+    </div>
+  <table class="table table-striped">
+    <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Actions</th>
+   </tr>
+   <% @wheels.each do |wheel| %>
+    <tr>
+        <td class="nowrap"><%= wheel.name %></td> 
+            <td><%= wheel.description %></td> 
+          <td class="nowrap">
+          <%= link_to edit_wheel_path(wheel) do %>
+          <%= fa_icon "pencil", class: "btn btn-primary" %>
+        <% end %>
+        <%= link_to wheel_path(wheel) do %>
+          <%= fa_icon "eye", class: "btn btn-success" %>
+        <% end %>
+        <%= link_to wheel_path(wheel), method: :delete, data: {confirm: "Are you sure? This action is irreversible!"} do %>
+        <%= fa_icon "trash", class: "btn btn-danger" %>
+        <% end %>
+        </td> 
+      </tr>
+   <% end %>
+  </table>
+</div>
