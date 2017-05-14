@@ -16,3 +16,6 @@
 .rspec
 .rvmrc
 public/uploads/
+secrets.yml
+.DS_Store
+app/.DS_Store
