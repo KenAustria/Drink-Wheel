@@ -1,2 +1,6 @@
-An application that randomly chooses a beverage from an index of cocktails, by spinning a wheel. 
+Spin the wheel and let the application choose your next drink from the index of the International Bartenders Association.
+
+Application Layer: Ruby on Rails
 Drink Model: CRUD Ability
+Authentification: Devise
+AVGrund Modal
