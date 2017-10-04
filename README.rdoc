@@ -1,6 +1,6 @@
-Spin the wheel and let the application choose your next drink from the index of the International Bartenders Association.
+Spin a wheel that will decide your next beverage, from the index of The International Bartenders Association.
 
-Application Layer: Ruby on Rails
-Drink Model: CRUD Ability
-Authentification: Devise
+Application Layer: Ruby on Rails__
+Drink Model: CRUD Ability__
+Authentification: Devise__
 AVGrund Modal
